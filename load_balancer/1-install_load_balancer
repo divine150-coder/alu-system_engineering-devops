@@ -16,8 +16,8 @@ frontend http_front
         default_backend  web_servers
 backend web_servers
         balance roundrobin
-        server 6153-web-01 54.162.86.183:80 check
-        server 6153-web-02 34.207.167.185:80 check
+        server 6825-web-01 54.162.86.183 check
+        server 6825-web-02 34.207.167.185 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
